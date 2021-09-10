@@ -1,18 +1,32 @@
-from fleet import fleet
 from herd import herd
+from fleet import fleet
+from robot import robot
+from dino import dino
+
+
 
 class battlefield:
     def __init__(self):
-        pass
+        self.game = self.run_game()
+
 
     def run_game(self):
-        pass
+        self.input = input("Please Type 'on' to start game")
+        if self.input != 'on':
+            self.input
+        if self.input == 'on':
+            self.display_welcome()
     
     def display_welcome(self):
-        pass
+        print("Welcome to Robots Vs. Dinosaurs!!")
+        self.battle()
 
     def battle(self):
-        pass
+        self.selection = input("Choose your charater! Type 'dino' or 'robot'")
+        if self.selection == "dino":
+            dino_selection = input()
+
+
 
     def dino_turn(self, dinosaur):
         pass
