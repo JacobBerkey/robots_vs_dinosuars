@@ -1,13 +1,16 @@
 from herd import herd
 from fleet import fleet
 from robot import robot
-from dino import dino
+from dinosaur import dinosaur
 
 
 
 class battlefield:
     def __init__(self):
-        self.game = self.run_game()
+        self.run_game()
+        self.show_dino_opponent_option()
+        self.dinosaurs = herd()
+
 
 
     def run_game(self):
@@ -22,11 +25,7 @@ class battlefield:
         self.battle()
 
     def battle(self):
-        self.selection = input("Choose your charater! Type 'dino' or 'robot'")
-        if self.selection == "dino":
-            dino_selection = input()
-
-
+        pass
 
     def dino_turn(self, dinosaur):
         pass
@@ -35,10 +34,12 @@ class battlefield:
         pass
 
     def show_dino_opponent_option(self):
-        pass
+        for dinosaur in self.dinosaurs.dinosaurs:
+            print(f"{dinosaur.health}")
 
     def show_robo_opponent_option(self):
-        pass
+        for robot in self.robot.robot:
+            print(f"{robot.weapons}")
 
     def display_winners(self):
         pass
